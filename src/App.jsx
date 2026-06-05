@@ -575,7 +575,7 @@ export default function FitQuest() {
           <div className="section-title">Log Weight</div>
           <div style={{ display:"flex", gap:8, marginBottom:8 }}>
             <input className="input" type="number" step="0.1" placeholder="Weight (kg)"
-                   value={newWeightVal} onChange={e => setNewWeightVal(e.target.value)} style={{ flex:1 }} />
+                   value={newWeightVal} onChange={(e) => {   const value = e.target.value;   setNewWeightVal(value); }} style={{ flex:1 }} />
             <input className="input" type="date" value={newWeightDate}
                    onChange={e => setNewWeightDate(e.target.value)} style={{ flex:1 }} />
           </div>
